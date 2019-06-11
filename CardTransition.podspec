@@ -21,11 +21,10 @@ Pod::Spec.new do |s|
                 UI component which presents a view controller as a Card dismisseable by swipping down
                        DESC
 
-  s.homepage         = 'https://github.com/alb.garciam@gmail.com/CardTransition'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/AlbGarciam/CardTransition.git'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'alb.garciam@gmail.com' => 'alb.garciam@gmail.com' }
-  s.source           = { :git => 'https://github.com/alb.garciam@gmail.com/CardTransition.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/AlbGarciam/CardTransition.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
 
