@@ -8,8 +8,11 @@
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+![](https://github.com/AlbGarciam/CardTransition/blob/master/animation.gif)
 
 ## Requirements
+* iOS 10.0+
+* Swift 5
 
 ## Installation
 
