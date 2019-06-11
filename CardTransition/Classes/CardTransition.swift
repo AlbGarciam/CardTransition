@@ -88,7 +88,7 @@ public class CardTransition: BaseCustomTransition {
         let superview = fromVC.view.superview ?? fromVC.view
         
         UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
-            superview?.frame = finalFrame.offsetBy(dx: 0, dy: finalFrame.height)
+            superview?.frame = finalFrame.offsetBy(dx: 0, dy: finalFrame.height+20)
         }, completion: { (_) in
             transitionContext.completeTransition(true)
         })
