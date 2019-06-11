@@ -1,0 +1,6 @@
+framework module Pods_CardTransition_Example {
+  umbrella header "Pods-CardTransition_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

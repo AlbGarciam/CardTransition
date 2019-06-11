@@ -1,0 +1,16 @@
+PODS:
+  - CardTransition (0.1.0)
+
+DEPENDENCIES:
+  - CardTransition (from `../`)
+
+EXTERNAL SOURCES:
+  CardTransition:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CardTransition: 94aac48c6ce15cce12d30266fd67c2b85c228376
+
+PODFILE CHECKSUM: f81c42043bad257b7d0892cbea6c0136e8c9fb77
+
+COCOAPODS: 1.6.0

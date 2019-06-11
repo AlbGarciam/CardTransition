@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "513BE6CE543480B269EC17686D0C2330"
+               BlueprintIdentifier = "AE502C0E8AD5727B819E8F633DDDC2D4"
                BlueprintName = "CardTransition"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "CardTransition.framework">
