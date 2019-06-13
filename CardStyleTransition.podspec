@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'CardTransition'
+  s.name             = 'CardStyleTransition'
   s.version          = '0.1.0'
   s.summary          = 'UI component which presents a view controller as a Card'
 

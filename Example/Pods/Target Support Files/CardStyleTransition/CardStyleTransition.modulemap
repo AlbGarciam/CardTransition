@@ -1,0 +1,6 @@
+framework module CardStyleTransition {
+  umbrella header "CardStyleTransition-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'CardTransition_Example' do
-  pod 'CardTransition', :path => '../'
+  pod 'CardStyleTransition', :path => '../'
 
   target 'CardTransition_Tests' do
     inherit! :search_paths
