@@ -81,11 +81,11 @@ public class CardTransition: BaseCustomTransition {
     
     override public func dismissing(using transitionContext: UIViewControllerContextTransitioning) {
         let (fromVC, toVC) = transitionContext.getControllers()
-        let finalFrame = transitionContext.finalFrame(for: toVC)
         
         toVC.view.isUserInteractionEnabled = true
         
         let superview = fromVC.view.superview ?? fromVC.view
+        let finalFrame = superview?.frame ?? .zero
         
         UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
             superview?.frame = finalFrame.offsetBy(dx: 0, dy: finalFrame.height+20)
