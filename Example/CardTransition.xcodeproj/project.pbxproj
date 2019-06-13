@@ -315,13 +315,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CardTransition_Example/Pods-CardTransition_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CardTransition/CardTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/CardStyleTransition/CardStyleTransition.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardStyleTransition.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CardTransition
+import CardStyleTransition
 
 class ViewController: UIViewController {
 

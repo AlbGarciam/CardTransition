@@ -1,5 +1,5 @@
 {
-  "name": "CardTransition",
+  "name": "CardStyleTransition",
   "version": "0.1.0",
   "summary": "UI component which presents a view controller as a Card",
   "description": "UI component which presents a view controller as a Card dismisseable by swipping down",

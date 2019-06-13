@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double CardTransitionVersionNumber;
-FOUNDATION_EXPORT const unsigned char CardTransitionVersionString[];
+FOUNDATION_EXPORT double CardStyleTransitionVersionNumber;
+FOUNDATION_EXPORT const unsigned char CardStyleTransitionVersionString[];
 
