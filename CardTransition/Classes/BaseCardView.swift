@@ -104,6 +104,9 @@ class BaseCardView: UIView {
     }
     
     override func layoutSubviews() {
+        if superview?.bounds.width != bounds.width {
+            frame = BaseCardView.initialFrame(for: isComplete)
+        }
         super.layoutSubviews()
         backgroundLayer.frame = bounds
     }
