@@ -1,9 +1,9 @@
 # CardStyleTransition
 
-[![CI Status](https://img.shields.io/travis/alb.garciam@gmail.com/CardTransition.svg?style=flat)](https://travis-ci.org/alb.garciam@gmail.com/CardTransition)
-[![Version](https://img.shields.io/cocoapods/v/CardTransition.svg?style=flat)](https://cocoapods.org/pods/CardTransition)
-[![License](https://img.shields.io/cocoapods/l/CardTransition.svg?style=flat)](https://cocoapods.org/pods/CardTransition)
-[![Platform](https://img.shields.io/cocoapods/p/CardTransition.svg?style=flat)](https://cocoapods.org/pods/CardTransition)
+[![CI Status](https://img.shields.io/travis/alb.garciam@gmail.com/CardTransition.svg?style=flat)](https://travis-ci.org/alb.garciam@gmail.com/CardStyleTransition)
+[![Version](https://img.shields.io/cocoapods/v/CardTransition.svg?style=flat)](https://cocoapods.org/pods/CardStyleTransition)
+[![License](https://img.shields.io/cocoapods/l/CardTransition.svg?style=flat)](https://cocoapods.org/pods/CardStyleTransition)
+[![Platform](https://img.shields.io/cocoapods/p/CardTransition.svg?style=flat)](https://cocoapods.org/pods/CardStyleTransition)
 
 ## Example
 
