@@ -51,6 +51,7 @@ public class CardTransition: BaseCustomTransition {
     override public func presenting(using transitionContext: UIViewControllerContextTransitioning) {
         let (fromVC, toVC) = transitionContext.getControllers()
         let containerView = transitionContext.containerView
+        containerView.isUserInteractionEnabled = false
         fromVC.view.isUserInteractionEnabled = false
         
         let view = BaseCardView(with: toVC,
@@ -77,6 +78,12 @@ public class CardTransition: BaseCustomTransition {
             containerView.bringSubviewToFront(view)
         }
         CATransaction.commit()
+        
+        containerView.layer.shadowColor = shadowColor.cgColor
+        containerView.layer.shadowOpacity = 0.2
+        containerView.layer.shadowOffset = CGSize(width: 0, height: -8)
+        containerView.layer.shadowRadius = 9
+        containerView.layer.masksToBounds = false
     }
     
     override public func dismissing(using transitionContext: UIViewControllerContextTransitioning) {

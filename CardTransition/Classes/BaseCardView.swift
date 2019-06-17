@@ -67,7 +67,6 @@ class BaseCardView: UIView {
     private func configure() {
         addTopIndicator()
         configureBackgroundLayer()
-        clipsToBounds = false
         
         guard let controller = controller else { return }
         controller.view.translatesAutoresizingMaskIntoConstraints = false
@@ -79,7 +78,7 @@ class BaseCardView: UIView {
         bottom.priority = UILayoutPriority(999)
         bottom.isActive = true
         layoutIfNeeded()
-        dropShadow()
+        clipsToBounds = true
     }
     
     private func addTopIndicator() {
@@ -104,19 +103,12 @@ class BaseCardView: UIView {
     }
     
     override func layoutSubviews() {
-        if superview?.bounds.width != bounds.width {
+        super.layoutSubviews()
+        guard let superview = superview else { return }
+        if superview.bounds.width != bounds.width {
             frame = BaseCardView.initialFrame(for: isComplete)
         }
-        super.layoutSubviews()
         backgroundLayer.frame = bounds
-    }
-    
-    private func dropShadow() {
-        layer.shadowColor = shadowColor.cgColor
-        layer.shadowOpacity = 0.2
-        layer.shadowOffset = CGSize(width: 0, height: -8)
-        layer.shadowRadius = 9
-        layer.masksToBounds = false
     }
     
     @objc private func onPanGesture(gesture: UIPanGestureRecognizer) {
