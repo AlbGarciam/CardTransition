@@ -28,7 +28,6 @@ class BaseCardView: UIView {
     }
     private weak var controller: UIViewController?
     
-    private var backgroundLayer: CALayer!
     private let isComplete: Bool
     private var panGesture: UIPanGestureRecognizer!
     
@@ -93,13 +92,11 @@ class BaseCardView: UIView {
     }
     
     private func configureBackgroundLayer() {
-        backgroundLayer = CALayer(layer: layer)
-        layer.insertSublayer(backgroundLayer, below: indicator.layer)
         if #available(iOS 11.0, *) {
-            backgroundLayer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-            backgroundLayer.cornerRadius = 16
+            layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+            layer.cornerRadius = 16
         }
-        backgroundLayer.backgroundColor = backgroundLayerColor.cgColor
+        layer.backgroundColor = backgroundLayerColor.cgColor
     }
     
     override func layoutSubviews() {
@@ -108,7 +105,6 @@ class BaseCardView: UIView {
         if superview.bounds.width != bounds.width {
             frame = BaseCardView.initialFrame(for: isComplete)
         }
-        backgroundLayer.frame = bounds
     }
     
     @objc private func onPanGesture(gesture: UIPanGestureRecognizer) {

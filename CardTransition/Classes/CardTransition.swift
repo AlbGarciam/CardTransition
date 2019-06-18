@@ -51,7 +51,7 @@ public class CardTransition: BaseCustomTransition {
     override public func presenting(using transitionContext: UIViewControllerContextTransitioning) {
         let (fromVC, toVC) = transitionContext.getControllers()
         let containerView = transitionContext.containerView
-        containerView.isUserInteractionEnabled = false
+        containerView.isUserInteractionEnabled = true
         fromVC.view.isUserInteractionEnabled = false
         
         let view = BaseCardView(with: toVC,
