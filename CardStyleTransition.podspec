@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'CardTransition'
+  s.name             = 'CardStyleTransition'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of CardTransition.'
+  s.summary          = 'UI component which presents a view controller as a Card'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,19 +18,18 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+                UI component which presents a view controller as a Card dismisseable by swipping down
                        DESC
 
-  s.homepage         = 'https://github.com/alb.garciam@gmail.com/CardTransition'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/AlbGarciam/CardTransition.git'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'alb.garciam@gmail.com' => 'alb.garciam@gmail.com' }
-  s.source           = { :git => 'https://github.com/alb.garciam@gmail.com/CardTransition.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/AlbGarciam/CardTransition.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'CardTransition/Classes/**/*'
+  s.swift_version = '5'
   
   # s.resource_bundles = {
   #   'CardTransition' => ['CardTransition/Assets/*.png']

@@ -1,4 +1,4 @@
-# CardTransition
+# CardStyleTransition
 
 [![CI Status](https://img.shields.io/travis/alb.garciam@gmail.com/CardTransition.svg?style=flat)](https://travis-ci.org/alb.garciam@gmail.com/CardTransition)
 [![Version](https://img.shields.io/cocoapods/v/CardTransition.svg?style=flat)](https://cocoapods.org/pods/CardTransition)
@@ -8,8 +8,11 @@
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+![](https://github.com/AlbGarciam/CardTransition/blob/master/animation.gif)
 
 ## Requirements
+* iOS 10.0+
+* Swift 5
 
 ## Installation
 
@@ -17,13 +20,13 @@ CardTransition is available through [CocoaPods](https://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'CardTransition'
+pod 'CardStyleTransition'
 ```
 
 ## Author
 
-alb.garciam@gmail.com, alb.garciam@gmail.com
+[AlbGarciam](https://github.com/AlbGarciam)
 
 ## License
 
-CardTransition is available under the MIT license. See the LICENSE file for more info.
+CardStyleTransition is available under the MIT license. See the LICENSE file for more info.

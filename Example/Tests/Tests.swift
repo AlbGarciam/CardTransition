@@ -1,5 +1,5 @@
 import XCTest
-import CardTransition
+import CardStyleTransition
 
 class Tests: XCTestCase {
     
