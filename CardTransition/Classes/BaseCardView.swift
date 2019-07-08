@@ -120,21 +120,24 @@ class BaseCardView: UIView {
         guard let view = gesture.view else { return }
         let initialFrame = BaseCardView.initialFrame(for: isComplete)
         switch gesture.state {
-        case .began, .changed:
+        case .changed:
             let yTranslation = gesture.translation(in: superview).y
             let newHeight = getNewHeight(for: yTranslation, height: initialFrame.height)
             let bounds = UIScreen.main.bounds
             let origin = CGPoint(x: 0, y: bounds.height-newHeight)
             let size = CGSize(width: bounds.width, height: newHeight)
-            view.frame = CGRect(origin: origin, size: size)
-            view.layoutIfNeeded()
+            DispatchQueue.main.async {
+                view.frame = CGRect(origin: origin, size: size)
+                view.layoutIfNeeded()
+            }
         case .ended, .cancelled:
             let shouldDismiss = view.frame.height < limit * initialFrame.height
             if shouldDismiss {
                 controller?.dismiss(animated: true, completion: nil)
             } else {
+                guard let view = gesture.view as? BaseCardView else { return }
+                view.layoutIfNeeded()
                 UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
-                    guard let view = gesture.view as? BaseCardView else { return }
                     view.frame = BaseCardView.initialFrame(for: view.isComplete)
                     view.layoutIfNeeded()
                 }, completion: nil)
