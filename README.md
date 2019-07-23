@@ -1,10 +1,4 @@
 # CardStyleTransition
-
-<<<<<<< HEAD
-[![CI Status](https://img.shields.io/travis/alb.garciam@gmail.com/CardTransition.svg?style=flat)](https://travis-ci.org/alb.garciam@gmail.com/CardStyleTransition)
-=======
-[![CI Status](https://img.shields.io/travis/alb.garciam@gmail.com/CardTransition.svg?style=flat)](https://travis-ci.org/alb.garciam@gmail.com/CardTransition)
->>>>>>> release/0.2.0
 [![Version](https://img.shields.io/cocoapods/v/CardTransition.svg?style=flat)](https://cocoapods.org/pods/CardStyleTransition)
 [![License](https://img.shields.io/cocoapods/l/CardTransition.svg?style=flat)](https://cocoapods.org/pods/CardStyleTransition)
 [![Platform](https://img.shields.io/cocoapods/p/CardTransition.svg?style=flat)](https://cocoapods.org/pods/CardStyleTransition)
