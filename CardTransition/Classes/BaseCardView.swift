@@ -28,7 +28,6 @@ class BaseCardView: UIView {
     }
     private weak var controller: UIViewController?
     
-    private var backgroundLayer: CALayer!
     private let isComplete: Bool
     private var panGesture: UIPanGestureRecognizer!
     
@@ -67,7 +66,6 @@ class BaseCardView: UIView {
     private func configure() {
         addTopIndicator()
         configureBackgroundLayer()
-        clipsToBounds = false
         
         guard let controller = controller else { return }
         controller.view.translatesAutoresizingMaskIntoConstraints = false
@@ -79,7 +77,7 @@ class BaseCardView: UIView {
         bottom.priority = UILayoutPriority(999)
         bottom.isActive = true
         layoutIfNeeded()
-        dropShadow()
+        clipsToBounds = true
     }
     
     private func addTopIndicator() {
@@ -94,26 +92,19 @@ class BaseCardView: UIView {
     }
     
     private func configureBackgroundLayer() {
-        backgroundLayer = CALayer(layer: layer)
-        layer.insertSublayer(backgroundLayer, below: indicator.layer)
         if #available(iOS 11.0, *) {
-            backgroundLayer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-            backgroundLayer.cornerRadius = 16
+            layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+            layer.cornerRadius = 16
         }
-        backgroundLayer.backgroundColor = backgroundLayerColor.cgColor
+        layer.backgroundColor = backgroundLayerColor.cgColor
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        backgroundLayer.frame = bounds
-    }
-    
-    private func dropShadow() {
-        layer.shadowColor = shadowColor.cgColor
-        layer.shadowOpacity = 0.2
-        layer.shadowOffset = CGSize(width: 0, height: -8)
-        layer.shadowRadius = 9
-        layer.masksToBounds = false
+        guard let superview = superview else { return }
+        if superview.bounds.width != bounds.width {
+            frame = BaseCardView.initialFrame(for: isComplete)
+        }
     }
     
     @objc private func onPanGesture(gesture: UIPanGestureRecognizer) {
@@ -126,19 +117,17 @@ class BaseCardView: UIView {
             let bounds = UIScreen.main.bounds
             let origin = CGPoint(x: 0, y: bounds.height-newHeight)
             let size = CGSize(width: bounds.width, height: newHeight)
-            DispatchQueue.main.async {
-                view.frame = CGRect(origin: origin, size: size)
-                view.layoutIfNeeded()
-            }
+            view.frame = CGRect(origin: origin, size: size)
+            view.layoutIfNeeded()
         case .ended, .cancelled:
             let shouldDismiss = view.frame.height < limit * initialFrame.height
             if shouldDismiss {
                 controller?.dismiss(animated: true, completion: nil)
             } else {
                 guard let view = gesture.view as? BaseCardView else { return }
-                view.layoutIfNeeded()
+                let initialFrame = BaseCardView.initialFrame(for: view.isComplete)
                 UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
-                    view.frame = BaseCardView.initialFrame(for: view.isComplete)
+                    view.frame = initialFrame
                     view.layoutIfNeeded()
                 }, completion: nil)
             }
