@@ -21,6 +21,43 @@ it, simply add the following line to your Podfile:
 pod 'CardStyleTransition'
 ```
 
+## How to use
+
+You only need to set your custom transition handler and conform to BottomOverlayprotocol. 
+
+```swift
+class SecondViewController: UIViewController, BottomOverlayProtocol {
+
+    var transitionHandler : BottomOverlayTransitionHandler!
+
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        self.transitionHandler = BottomOverlayTransitionHandler(presented: self,
+                                                                interactive: true,
+                                                                dimmedColor: .blue,
+                                                                indicatorColor: .yellow,
+                                                                duration: 1)
+        transitioningDelegate = transitionHandler
+        modalPresentationStyle = .custom
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .red
+    }
+
+    func bottomOverlayHeight() -> CGFloat {
+        return 300
+    }
+}
+```
+
+By implementing `bottomOverlayHeight()` you can specify the height of the overlay. If you dont implement this method it will apply the minimum height that fits to the container
+
 ## Author
 
 [AlbGarciam](https://github.com/AlbGarciam)

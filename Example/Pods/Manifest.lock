@@ -1,5 +1,5 @@
 PODS:
-  - CardStyleTransition (0.1.0)
+  - CardStyleTransition (0.3.0)
 
 DEPENDENCIES:
   - CardStyleTransition (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CardStyleTransition: d8448cfed394bdb9e3fd205adabf812708395fd9
+  CardStyleTransition: 30c6bcbefa28fdb1d1bd4b930a0ab036008e78b0
 
 PODFILE CHECKSUM: 3f3d10356c2fc8fa1bb675ff0709d10cc4dc36d0
 
