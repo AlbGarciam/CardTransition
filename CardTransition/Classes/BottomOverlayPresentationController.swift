@@ -10,16 +10,27 @@ import UIKit
 open class BottomOverlayPresentationController: UIPresentationController {
     
     public let dimmedColor: UIColor
+    public let indicatorColor: UIColor
+    public let cornerRadius: CGFloat
     open fileprivate(set) var dimmedView: UIView!
     
-    public init(presentedViewController: BottomOverlay, presenting: UIViewController?, dimmedColor: UIColor) {
+    public init(presentedViewController: BottomOverlay, presenting: UIViewController?,
+                dimmedColor: UIColor, indicatorColor: UIColor, cornerRadius: CGFloat) {
         self.dimmedColor = dimmedColor
+        self.indicatorColor = indicatorColor
+        self.cornerRadius = cornerRadius
         super.init(presentedViewController: presentedViewController, presenting: presenting)
         setupDimmedView()
+        addTopIndicator()
     }
     
     override open func containerViewWillLayoutSubviews() {
         presentedView?.frame = frameOfPresentedViewInContainerView
+        dimmedView.frame = CGRect(origin: .zero, size: UIScreen.main.bounds.size)
+        if #available(iOS 11.0, *) {
+            presentedView?.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+            presentedView?.layer.cornerRadius = cornerRadius
+        }
     }
     
     override open var frameOfPresentedViewInContainerView: CGRect {
@@ -68,5 +79,22 @@ private extension BottomOverlayPresentationController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dimmedViewTapped(_:)))
         dimmedView.isUserInteractionEnabled = true
         dimmedView.addGestureRecognizer(tapGesture)
+    }
+    
+    func addTopIndicator() {
+        guard let presentedView = self.presentedView else { return }
+        let indicator = UIView()
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        
+        indicator.layer.masksToBounds = true
+        indicator.layer.cornerRadius = 2
+        indicator.backgroundColor = indicatorColor
+        
+        presentedView.addSubview(indicator)
+        
+        indicator.heightAnchor.constraint(equalToConstant: 4).isActive = true
+        indicator.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        indicator.topAnchor.constraint(equalTo: presentedView.topAnchor, constant: 14).isActive = true
+        indicator.centerXAnchor.constraint(equalTo: presentedView.centerXAnchor).isActive = true
     }
 }

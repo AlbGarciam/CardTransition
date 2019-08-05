@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02120AC0C2967347B19322D04DE48ED2 /* BaseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3F0C48D6E0A7FD89F2831350E3C84B /* BaseCardView.swift */; };
 		1BBA0FB023721E2BF0B66D1BC53474D5 /* CardStyleTransition-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C082031D5B5226C72E9BCA08E1C883AD /* CardStyleTransition-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37FE6378D073F1724F2927DFCFF53711 /* BottomOverlayDismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782180B925FA9CD0B80A148B4F967A61 /* BottomOverlayDismissTransition.swift */; };
 		442161CBD22CF73F0F438F1302916456 /* Pods-CardTransition_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F1901166A3F5B1F27615DAFDC7D2C4 /* Pods-CardTransition_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -16,15 +15,12 @@
 		5C2EE148B3969A4C104CC7B7E11CFA51 /* BottomOverlayPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB2474FE1B7662D5BD5E19BE1CA995 /* BottomOverlayPresentationController.swift */; };
 		5DFE34988E3A95330071DDDA068CA279 /* Pods-CardTransition_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EEA6F472FFBEBA24FDBF00E4219AF38 /* Pods-CardTransition_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6C121E87A8569982594030A09F52C72F /* BottomOverlayPresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0F4D1B8D035DBEB73E11DEE891F24 /* BottomOverlayPresentTransition.swift */; };
-		6DBB70C8D2FC3A20A1CA16B89B0243B3 /* SafeAreaHeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = B006F4F235481FF33E2A1ABCA3C05E42 /* SafeAreaHeights.swift */; };
 		74231A162F27CF45E4C69BD79B926A71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		7D2470ACE3500DE2F14F667C48DF5132 /* CardStyleTransition-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D30A421D507EF4C82F36FA19539B0E5 /* CardStyleTransition-dummy.m */; };
-		898E2C24B46202ADFF34B80BFC9F0974 /* CardTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF219B11F8D73EEEAC28C060501227F /* CardTransition.swift */; };
 		99511F67E52EA16CEB87C416E98F98B4 /* Pods-CardTransition_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF58BD874A476119362DC83DF4F78AE2 /* Pods-CardTransition_Example-dummy.m */; };
 		CB38C2B02C45E352AD51D06BCD3992F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		DBFEB19255B78D02ED62F35C390DD80B /* Pods-CardTransition_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B136A8CC0B7DF0704BD623C5B107A79 /* Pods-CardTransition_Tests-dummy.m */; };
 		DF267E093FB20BAC97679C8983DD0EE2 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D56A0580325D67E143EC3E750DEC6F /* BaseTransition.swift */; };
-		E4EE01D826458E51A54F6435D0A5DEB3 /* BaseCustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF327573179617303752319ABA11CC4E /* BaseCustomTransition.swift */; };
 		F595C9E84E44A2EDEBC1C3EA0D20BFDF /* BottomOverlayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8512104255B461F5EFEE8DAA018E41 /* BottomOverlayProtocol.swift */; };
 		F805D67F22F358C1006B35B8 /* BottomOverlayDismissInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F805D67E22F358C0006B35B8 /* BottomOverlayDismissInteractor.swift */; };
 /* End PBXBuildFile section */
@@ -72,9 +68,6 @@
 		94F1901166A3F5B1F27615DAFDC7D2C4 /* Pods-CardTransition_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CardTransition_Example-umbrella.h"; sourceTree = "<group>"; };
 		9B81D6A6A8C81EEBD823C0466F3D7B7B /* CardStyleTransition-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CardStyleTransition-prefix.pch"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FF219B11F8D73EEEAC28C060501227F /* CardTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardTransition.swift; path = CardTransition/Classes/CardTransition.swift; sourceTree = "<group>"; };
-		B006F4F235481FF33E2A1ABCA3C05E42 /* SafeAreaHeights.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SafeAreaHeights.swift; path = CardTransition/Classes/SafeAreaHeights.swift; sourceTree = "<group>"; };
-		BE3F0C48D6E0A7FD89F2831350E3C84B /* BaseCardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseCardView.swift; path = CardTransition/Classes/BaseCardView.swift; sourceTree = "<group>"; };
 		C082031D5B5226C72E9BCA08E1C883AD /* CardStyleTransition-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CardStyleTransition-umbrella.h"; sourceTree = "<group>"; };
 		C62E49BF94D4D3C7508E425AF0348B43 /* Pods_CardTransition_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardTransition_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C931DB94801CFF7CFB1EEAC10DBBB07A /* CardStyleTransition.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CardStyleTransition.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -84,7 +77,6 @@
 		D484E1A6C8ABF60E87F3AB17083AC08C /* Pods-CardTransition_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CardTransition_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D4E23A225995DD059BA7D19996AA3F04 /* Pods-CardTransition_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CardTransition_Tests-Info.plist"; sourceTree = "<group>"; };
 		E0C87EAB6BB32FD3368FF2B0E2EFB6E4 /* BottomOverlayTransitionHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BottomOverlayTransitionHandler.swift; path = CardTransition/Classes/BottomOverlayTransitionHandler.swift; sourceTree = "<group>"; };
-		EF327573179617303752319ABA11CC4E /* BaseCustomTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseCustomTransition.swift; path = CardTransition/Classes/BaseCustomTransition.swift; sourceTree = "<group>"; };
 		EF3F56019F7490809FA7F9D0F22B129F /* CardStyleTransition.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CardStyleTransition.xcconfig; sourceTree = "<group>"; };
 		EFCAEB3267C5482F62787C38C1224C91 /* Pods-CardTransition_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CardTransition_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F805D67E22F358C0006B35B8 /* BottomOverlayDismissInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BottomOverlayDismissInteractor.swift; path = CardTransition/Classes/BottomOverlayDismissInteractor.swift; sourceTree = "<group>"; };
@@ -171,14 +163,10 @@
 		6EE42D98814B6D9CBD24046F809217E4 /* CardStyleTransition */ = {
 			isa = PBXGroup;
 			children = (
-				BE3F0C48D6E0A7FD89F2831350E3C84B /* BaseCardView.swift */,
-				EF327573179617303752319ABA11CC4E /* BaseCustomTransition.swift */,
 				91DB2474FE1B7662D5BD5E19BE1CA995 /* BottomOverlayPresentationController.swift */,
 				F805D67E22F358C0006B35B8 /* BottomOverlayDismissInteractor.swift */,
 				0C8512104255B461F5EFEE8DAA018E41 /* BottomOverlayProtocol.swift */,
 				E0C87EAB6BB32FD3368FF2B0E2EFB6E4 /* BottomOverlayTransitionHandler.swift */,
-				9FF219B11F8D73EEEAC28C060501227F /* CardTransition.swift */,
-				B006F4F235481FF33E2A1ABCA3C05E42 /* SafeAreaHeights.swift */,
 				1D68ED324BC637E3123C31005665C254 /* Pod */,
 				38656914CB15CEC410CC8E6FBA82B0FF /* Support Files */,
 				A6B81D1B40F29C524FD55E25A77713BA /* Transitions */,
@@ -419,8 +407,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02120AC0C2967347B19322D04DE48ED2 /* BaseCardView.swift in Sources */,
-				E4EE01D826458E51A54F6435D0A5DEB3 /* BaseCustomTransition.swift in Sources */,
 				DF267E093FB20BAC97679C8983DD0EE2 /* BaseTransition.swift in Sources */,
 				37FE6378D073F1724F2927DFCFF53711 /* BottomOverlayDismissTransition.swift in Sources */,
 				5C2EE148B3969A4C104CC7B7E11CFA51 /* BottomOverlayPresentationController.swift in Sources */,
@@ -429,8 +415,6 @@
 				59AF02E7DDB5BFA0DD890C27C9D6A672 /* BottomOverlayTransitionHandler.swift in Sources */,
 				7D2470ACE3500DE2F14F667C48DF5132 /* CardStyleTransition-dummy.m in Sources */,
 				F805D67F22F358C1006B35B8 /* BottomOverlayDismissInteractor.swift in Sources */,
-				898E2C24B46202ADFF34B80BFC9F0974 /* CardTransition.swift in Sources */,
-				6DBB70C8D2FC3A20A1CA16B89B0243B3 /* SafeAreaHeights.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

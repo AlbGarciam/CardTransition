@@ -18,6 +18,7 @@ class SecondViewController: UIViewController, BottomOverlayProtocol {
         self.transitionHandler = BottomOverlayTransitionHandler(presented: self,
                                                                 interactive: true,
                                                                 dimmedColor: .blue,
+                                                                indicatorColor: .yellow,
                                                                 duration: 1)
         transitioningDelegate = transitionHandler
         modalPresentationStyle = .custom
