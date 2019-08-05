@@ -15,6 +15,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		A28814F2E7EACBBB4B2CEA80 /* Pods_CardTransition_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9BA851773F3D3E410E7EDC5 /* Pods_CardTransition_Example.framework */; };
 		CB9407EE81A1EC121E2509FF /* Pods_CardTransition_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24857478A274233237F48127 /* Pods_CardTransition_Tests.framework */; };
+		F805D67B22F354DB006B35B8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F805D67A22F354DB006B35B8 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7ADE23F63B1398944133BC80 /* Pods-CardTransition_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardTransition_Tests.release.xcconfig"; path = "Target Support Files/Pods-CardTransition_Tests/Pods-CardTransition_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E9BA851773F3D3E410E7EDC5 /* Pods_CardTransition_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardTransition_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F805D67A22F354DB006B35B8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				F805D67A22F354DB006B35B8 /* SecondViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -335,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F805D67B22F354DB006B35B8 /* SecondViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

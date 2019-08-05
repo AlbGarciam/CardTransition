@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "75659ADA7BD5E9D6ACBCA37EC6094E7A"
+               BlueprintIdentifier = "F9BB911C3A64D63014757CFD2BEE74A1"
                BuildableName = "Pods_CardTransition_Tests.framework"
                BlueprintName = "Pods-CardTransition_Tests"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "75659ADA7BD5E9D6ACBCA37EC6094E7A"
+            BlueprintIdentifier = "F9BB911C3A64D63014757CFD2BEE74A1"
             BuildableName = "Pods_CardTransition_Tests.framework"
             BlueprintName = "Pods-CardTransition_Tests"
             ReferencedContainer = "container:Pods.xcodeproj">
