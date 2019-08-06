@@ -50,6 +50,7 @@ open class BottomOverlayTransitionHandler : NSObject, UIViewControllerTransition
     }
     
     public func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return isInteractive ? interactor : nil
+        guard isInteractive else { return nil }
+        return (interactor?.interactionInProgress ?? true) ? interactor : nil
     }
 }

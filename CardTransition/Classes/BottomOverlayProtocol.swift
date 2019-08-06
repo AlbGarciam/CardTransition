@@ -11,10 +11,13 @@ public typealias BottomOverlay = UIViewController & BottomOverlayProtocol
 
 public protocol BottomOverlayProtocol: class {
     func bottomOverlayHeight() -> CGFloat
+    func dimmedViewTapped()
 }
 
 public extension BottomOverlayProtocol where Self: UIViewController {
     func bottomOverlayHeight() -> CGFloat {
         return view.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
     }
+    
+    func dimmedViewTapped() {}
 }
