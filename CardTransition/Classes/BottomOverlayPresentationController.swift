@@ -64,7 +64,7 @@ open class BottomOverlayPresentationController: UIPresentationController {
     }
     
     @objc fileprivate func dimmedViewTapped(_ tap: UITapGestureRecognizer) {
-        presentedViewController.dismiss(animated: true, completion: nil)
+        (presentedViewController as? BottomOverlay)?.dimmedViewTapped()
     }
     
 }
