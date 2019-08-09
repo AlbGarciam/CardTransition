@@ -33,7 +33,7 @@ class SecondViewController: UIViewController, BottomOverlayProtocol {
         view.backgroundColor = .red
     }
     
-    func bottomOverlayHeight() -> CGFloat {
+    func bottomOverlayHeight(for width: CGFloat) -> CGFloat {
         return 300
     }
 }
