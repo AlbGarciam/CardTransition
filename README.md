@@ -53,6 +53,10 @@ class SecondViewController: UIViewController, BottomOverlayProtocol {
     func bottomOverlayHeight() -> CGFloat {
         return 300
     }
+    
+    func bottomOverlayWidth() -> CGFloat {
+        return min(UIScreen.main.bounds.width, 414 )
+    }
 }
 ```
 
