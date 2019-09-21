@@ -35,11 +35,13 @@ open class BottomOverlayPresentationController: UIPresentationController {
     
     override open var frameOfPresentedViewInContainerView: CGRect {
         let presentingBounds = presentingViewController.view.bounds
-        let width = presentingBounds.width
+        let width = (presentedViewController as? BottomOverlay)?.bottomOverlayWidth() ?? UIScreen.main.bounds.width
         
         let height = (presentedViewController as? BottomOverlay)?.bottomOverlayHeight(for: width) ?? 0
         
-        let origin = CGPoint(x: 0, y: presentingBounds.height - height)
+        let xOrigin = (UIScreen.main.bounds.width - width) / 2
+        
+        let origin = CGPoint(x: xOrigin, y: presentingBounds.height - height)
         let size = CGSize(width: width, height: height)
         
         return CGRect(origin: origin, size: size)
