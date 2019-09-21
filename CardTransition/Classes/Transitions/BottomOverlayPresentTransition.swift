@@ -17,7 +17,7 @@ class BottomOverlayPresentTransition: BaseTransition {
         let toVC = transitionContext.viewController(forKey: .to)!
         transitionContext.containerView.addSubview(toVC.view)
         let presentFrame = transitionContext.finalFrame(for: toVC)
-        let initialFrame = CGRect(origin: CGPoint(x: 0, y: UIScreen.main.bounds.size.height), size: presentFrame.size)
+        let initialFrame = CGRect(origin: CGPoint(x: presentFrame.origin.x, y: UIScreen.main.bounds.size.height), size: presentFrame.size)
         toVC.view.frame = initialFrame
         
         let timingFunction = CAMediaTimingFunction(controlPoints: 5/6, 0.2, 2/6, 0.9)
