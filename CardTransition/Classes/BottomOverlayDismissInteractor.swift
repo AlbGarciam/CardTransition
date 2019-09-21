@@ -13,6 +13,7 @@ class BottomOverlayDismissInteractor: UIPercentDrivenInteractiveTransition {
     private let SwipeThreshold: CGFloat = 1000
     private weak var presentedViewController: BottomOverlay?
     private weak var transitioningDelegate: BottomOverlayTransitionHandler?
+    private(set) var interactionInProgress: Bool = false
     
     private var currentPercent: CGFloat = 0
     
@@ -42,11 +43,13 @@ class BottomOverlayDismissInteractor: UIPercentDrivenInteractiveTransition {
         
         switch pan.state {
         case .began:
+            interactionInProgress = true
             presentedViewController?.dismiss(animated: true, completion: nil)
         case .changed:
             update(currentPercent)
         default:
             let velocity = pan.velocity(in: presentedViewController?.view)
+            interactionInProgress = false
             finishAnimation(withVelocity: velocity)
         }
     }

@@ -34,11 +34,13 @@ open class BottomOverlayPresentationController: UIPresentationController {
     }
     
     override open var frameOfPresentedViewInContainerView: CGRect {
-        let height = (presentedViewController as? BottomOverlay)?.bottomOverlayHeight() ?? 0
         let presentingBounds = presentingViewController.view.bounds
+        let width = presentingBounds.width
+        
+        let height = (presentedViewController as? BottomOverlay)?.bottomOverlayHeight(for: width) ?? 0
         
         let origin = CGPoint(x: 0, y: presentingBounds.height - height)
-        let size = CGSize(width: presentingBounds.width, height: height)
+        let size = CGSize(width: width, height: height)
         
         return CGRect(origin: origin, size: size)
     }
@@ -64,7 +66,7 @@ open class BottomOverlayPresentationController: UIPresentationController {
     }
     
     @objc fileprivate func dimmedViewTapped(_ tap: UITapGestureRecognizer) {
-        presentedViewController.dismiss(animated: true, completion: nil)
+        (presentedViewController as? BottomOverlay)?.dimmedViewTapped()
     }
     
 }
